@@ -23,5 +23,8 @@ The 2 major things that have not been addressed are -
 ## Addition of functionalities
 PHP can be used to set a file in an outer directory with less privilege. This file is read by a cron job ruuning as root, which removes the credentials for that particular user by running the `cred_del` script.
 
+## Where can it be used
+This server can easily be used inside a virtual machine in scenarios when obtaining a box.com or similar service is not possible or recommended. Another use case is in CTF questions, where security can be relaxed at different points to teach InfoSec community about SQL injection or Burpsuite.
+
 ---
 
