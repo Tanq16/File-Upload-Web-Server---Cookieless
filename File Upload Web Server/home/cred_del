@@ -1,0 +1,18 @@
+#!/bin/bash
+clear
+echo -e "\e[92mEnter usernames when prompted to delete them from the database."
+echo -e "When done press enter upon being asked for username to exit.\e[39m"
+while true
+do
+        echo -ne "\e[33mEnter Username : \e[39m"
+        read u
+        if [ -z $u ]
+        then
+                break
+        fi
+#        mysql -u root -proot -e "use TEST; delete from data where un='$u'" 2>/dev/null
+#        mysql -u root -proot -e "use TEST; delete from available_credentials where uname='$u'" 2>/dev/null
+        echo
+done
+#clear
+#echo -e "\e[31m\e[39m"

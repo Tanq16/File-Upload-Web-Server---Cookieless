@@ -1,0 +1,4 @@
+#echo -e "\e[31m\e[39m"
+#!/bin/bash
+clear
+mysql -u root -proot -e "use TEST; select * from available_credentials" 2>/dev/null

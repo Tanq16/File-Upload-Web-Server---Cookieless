@@ -1,0 +1,17 @@
+#!/bin/bash
+clear
+echo -ne "\e[92mEnter number of accounts to create : \e[39m"
+read n
+for i in $(seq 1 $n)
+do
+        u=$(strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 10 | tr -d '\n')
+        p=$(strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 15 | tr -d '\n')
+        echo -e "\e[33mUsername : \e[39m$u"
+        echo -e "\e[33mPassword : \e[39m$p"
+        h=$(echo -n $p | sha256sum | tr -d ' ' | tr -d '-')
+        echo
+        #mysql -u root -proot -e "use TEST; insert into data values('$u', '$h');" 2>/dev/null
+        #mysql -u root -proot -e "use TEST; insert into available_credentials values('$u', '$p');" 2>/dev/null
+done
+
+#echo -e "\e[31m\e[39m"

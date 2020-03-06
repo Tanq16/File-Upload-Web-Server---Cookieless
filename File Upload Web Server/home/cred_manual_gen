@@ -1,0 +1,10 @@
+#!/bin/bash
+clear
+echo -ne "\e[33mEnter Username: \e[39m"
+read un
+echo -ne "\e[33mEnter Password: \e[39m"
+read pw
+h=$(echo -n $pw | sha256sum | tr -d ' ' | tr -d '-')
+#mysql -u root -proot -e "use TEST; insert into data values('$un', '$h');" 2>/dev/null
+#mysql -u root -proot -e "use TEST; insert into available_credentials values('$un', '$pw');" 2>/dev/null
+
